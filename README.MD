@@ -1,0 +1,86 @@
+## 姜文  1035465284
+18310349227
+
+## 周末node课程
+- git node基础
+- express koa mongodb
+- 博客 聊天室 爬虫
+
+## git
+- 分布式 可以管理代码，合并代码
+- svn集中式  速度慢，不停的备份
+
+## git下载地址
+https://git-scm.com/downloads
+git安装选择在window下使用git并且在window下使用linux命令
+
+## mac下 
+- 增加mac下的命令窗口 oh-my-zsh item2
+
+## cd  changeDirectory
+
+
+## 告诉git你是谁（否则无法提交）
+- 查看当前git配置列表
+```
+git config --list
+git config --global user.name github账号名
+git config --global user.email github邮箱
+提交的时候如果报错who are you 表示没配置
+```
+## 删除文件夹
+```
+rm -rf .git
+```
+
+## 要管理文件
+- 初始化git，告诉git 哪个文件夹归你管理
+
+> git仓库 不能嵌套
+
+
+## mkdir创建目录
+
+## touch 创建文件
+可以创建以.开头的文件
+
+## cat 查看文件
+
+## vi
+- i 插入
+- ESC+:wq! 保存退出
+
+## 增加暂存区
+```
+git add .
+```
+> 在工作区中的文件是红色的，添加到暂存区是绿色的
+
+## 添加到历史区
+```
+git commit -m'xxx'
+```
+## 查看状态
+```
+git status
+```
+## 查看提交日志
+```
+git log
+```
+## 移除本次的add
+```
+git reset HEAD 文件名
+```
+## 从暂存区中覆盖掉工作区 
+```
+git checkout 文件名
+```
+
+## 回滚
+- 将工作区 暂存区 历史区用同一个版本全部覆盖掉
+```
+git reset --hard 版本号
+```
+
+> 想查看未来需要用 reflog
