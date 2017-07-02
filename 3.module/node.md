@@ -18,10 +18,11 @@
         nrm use cnpm
         
     - 本地安装(在当前项目下使用)
-        
-        
+        npm init 记录所有依赖的 package.json,可能会导致安装到上级目录，名字不能有中文，不能有大写，不能有特殊字符
+        - 开发依赖 只在开发时应用 --save-dev (-D)
+        - 项目依赖 开发上线都需要 --save (-S)
+           
 - 内置模块、核心模块 node自带的
-
 
 
 > npm node package manager 管理node的包（很多js文件）的，安装node自带npm  ,买node送npm
