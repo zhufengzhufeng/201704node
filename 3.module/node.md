@@ -16,13 +16,36 @@
         npm install nrm -g
         nrm test
         nrm use cnpm
-        
+
     - 本地安装(在当前项目下使用)
-        npm init 记录所有依赖的 package.json,可能会导致安装到上级目录，名字不能有中文，不能有大写，不能有特殊字符
+        npm init -y 记录所有依赖的 package.json,可能会导致安装到上级目录，名字不能有中文，不能有大写，不能有特殊字符
+        - 安装 npm install 
         - 开发依赖 只在开发时应用 --save-dev (-D)
         - 项目依赖 开发上线都需要 --save (-S)
-           
+        - 卸载 npm uninstall 模块的名字 
+        - 查看模块版本 npm info vue
+        - 指定版本安装 npm install vue@1.0.0 --save
+                   
 - 内置模块、核心模块 node自带的
 
+## yarn 需要npm来下载 (主流)
+- 安装一次即可
+```
+npm install yarn -g
+```
+- 初始化package.json
+```
+yarn init -y
+```
+- 本地安装
+    - 开发依赖 yarn add less --dev
+    - 项目依赖 yarn add jquery
+- 删除
+    - yarn remove less --dev
+
+## 安装全部依赖
+```
+yarn install
+```
 
 > npm node package manager 管理node的包（很多js文件）的，安装node自带npm  ,买node送npm
