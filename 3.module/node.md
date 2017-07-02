@@ -49,3 +49,15 @@ yarn install
 ```
 
 > npm node package manager 管理node的包（很多js文件）的，安装node自带npm  ,买node送npm
+
+
+## 发布包(必须得是别人没发过的，包里需要有一个package.json文件)
+- 需要登录到官方npm上
+```
+nrm use npm
+```
+- 注册账号
+```
+npm addUser
+npm publish 发布
+```
