@@ -14,11 +14,12 @@
 //写一个求和函数，在另一个文件中使用，分别使用两种方式实现
 
 /*
+let a = require('./xxx')
+
 (function () {
    module.exports = exports = {}
    this = module.exports;
-   exports.obj = 1;
-   module.exports = {obj:1}
-
+   //1.module.exports = 1
+   //2.exports.a = 1;
    return module.exports
 })()*/
