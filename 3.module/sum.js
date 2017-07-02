@@ -1,4 +1,4 @@
-function sum(...arr) {
+function sum(...arr) { //reduce
     //类数组如何转换成数组
     //1.Array.from(arguments);//将类数组转化成数组
     //2.[].slice.call(arguments);
@@ -8,8 +8,9 @@ function sum(...arr) {
     arr.forEach(item=>total+=item);
     return total;
 }
-//1.module.exports = sum;
+//1. 导出的函数 不要是箭头函数
+module.exports = sum;
 //2.exports.sum = sum;
 //3.module.exports.sum = sum;
-global.sum = sum;
+//global.sum = sum;
 //尽量不要在global上挂载属性

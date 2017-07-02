@@ -9,6 +9,19 @@
 - 如何引用一个模块 require();
 
 ## 模块分类
-- 文件模块
-- 第三方模块
+- 文件模块  自己写的模块
+- 第三方模块 别人写的，需要下载 npm下载模块
+
+    - 全局安装(只能在命令行下使用，会提供给你一个全局命令,代码里不能使用) node切换源的工具
+        npm install nrm -g
+        nrm test
+        nrm use cnpm
+        
+    - 本地安装(在当前项目下使用)
+        
+        
 - 内置模块、核心模块 node自带的
+
+
+
+> npm node package manager 管理node的包（很多js文件）的，安装node自带npm  ,买node送npm
