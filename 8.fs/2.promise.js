@@ -1,12 +1,22 @@
 //Promise 承诺  ->  永远没有结果  ->等待 -> 成功 resolve  -> 失败 reject
 //Promise 在node中天生支持 构造函数
 let fs = require('fs');
-function read(url) {
+function read(url,cb) {
+    fs.readFile(url,'utf8',function (err,data) {
+        if(err)console.log(err)
+        cb(data);
+    });
+}
+read('name.txt',function (data) {
+    console.log(data);
+});
+
+/*function read(url) {
     return new Promise(function (resolve,reject) {
         fs.readFile(url,'utf8',function (err,data) {
             if(err)reject(err);
             resolve(data)
-        })
+        });
     })
 }
 //解决了回调问题
@@ -14,7 +24,7 @@ read('name.txt').then(function (data) {
     console.log(data);
 },function (err) {
     console.log(err);
-});
+});*/
 
 
 
