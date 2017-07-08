@@ -50,3 +50,6 @@ man.removeListener('有钱',buyCar);
 man.removeListener('有钱',buyPack);
 man.emit('有钱','妹子','妹子2'); //[buyCar(),buyPack()]
 
+
+
+
