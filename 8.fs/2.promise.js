@@ -31,7 +31,7 @@ Promise.all([read('name.txt'),read('age.txt')]).then(([name,age])=>{
     console.log(school);
 },function (err) {
     console.log(err);
-})
+});
 /*read('name.txt').then(function (data) {
     console.log(data);
 },function (err) {
