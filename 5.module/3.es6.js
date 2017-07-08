@@ -13,7 +13,7 @@ class Person{
 }
 class Girl extends Person{
     constructor(name,age){
-        super(name,age);
+        super(name,age); //必须调用，相当于调用 父类函数,父类函数中的this指向girl
         this.age = age;
     }
 }
