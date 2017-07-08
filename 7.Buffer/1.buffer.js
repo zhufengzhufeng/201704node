@@ -49,8 +49,21 @@ var buf4 = new Buffer('大方');
 //模拟一个concat方法　myConcat
 Buffer.myConcat = function (list,totalLength) {
     //1.先判断是否传入totalLength,如果没传递 计算总长 typeOf
+    if(typeof totalLength==='undefined'){
+        totalLength = 0;
+        list.forEach(item=>totalLength+=item.length);//计算总长
+    }
     //2.创建一个新buffer
+    let buffer = new Buffer(totalLength);
     //3.循环数组 将每一项 拷贝到大buffer上
+    let index = 0;
+    list.forEach(item=>{
+        item.copy(buffer,index);
+        index+=item.length
+    });
     //4.截取有效长度
+    return buffer.slice(0,index);//多余长度 截取掉即可
 };
-console.log(Buffer.myConcat([buf1,buf2,buf3,buf4],10000).toString());
+console.log(Buffer.myConcat([buf1,buf2,buf3,buf4],1000).toString());
+
+//slice copy concat toString
