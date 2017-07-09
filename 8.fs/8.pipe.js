@@ -12,3 +12,4 @@ let path = require('path');
 //path 内置模块 resolve 解析  join
 console.log(path.resolve('dist','a'));//给相对 会返还给你一个绝对路径
 //console.log(path.join(__dirname,'dist','a'));
+
