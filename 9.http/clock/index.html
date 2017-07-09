@@ -28,18 +28,18 @@
                 reject(err);
             };
             xhr.send(JSON.stringify(data));
-        })
+        });
     }
     ajax({
         url:'/clock',
-        type:'json',
+        type:'text',
         method:'GET',
         async:true,
         data:{
             a:1,b:2
         }
     }).then(function (data) {
-        clock.innerHTML = data.date
+        clock.innerHTML = data
     },function () {
         
     })

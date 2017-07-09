@@ -11,8 +11,8 @@ http.createServer(function (req,res) {
     }
     //1. /clock
     else if(pathname === '/clock'){
-        let date = new Date().toLocaleString();
-        res.end(JSON.stringify({date})); //string or buffer
+        let timer = new Date().toLocaleString();
+        res.end(JSON.stringify({timer:timer})); //string or buffer
     }
     else{
         let flag = fs.existsSync('.'+pathname);
