@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="clock"></div>
+<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET','http://localhost:5000/clock',true);
+    xhr.responseType = 'json';//会自动将服务端返回的数据 转化成json
+    xhr.onload = function () {
+        // 4 和 200都满足时
+        //如果服务端返回的是对象 需要用xhr.response,如果返回的是字符串 两者均可
+        clock.innerHTML = xhr.response.date
+    };
+    xhr.send();
+</script>
+</body>
+</html>
