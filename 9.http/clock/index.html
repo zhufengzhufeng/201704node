@@ -7,7 +7,7 @@
 <body>
 <div id="clock"></div>
 <script>
-    let xhr = new XMLHttpRequest();
+    /*let xhr = new XMLHttpRequest();
     xhr.open('GET','http://localhost:5000/clock',true);
     xhr.responseType = 'json';//会自动将服务端返回的数据 转化成json
     xhr.onload = function () {
@@ -15,7 +15,36 @@
         //如果服务端返回的是对象 需要用xhr.response,如果返回的是字符串 两者均可
         clock.innerHTML = xhr.response.date
     };
-    xhr.send();
+    xhr.send();*/
+    function ajax({url='',type='text',method='GET',async=true,data={}}) {
+        return new Promise(function (resolve,reject) {
+            let xhr = new XMLHttpRequest();
+            xhr.responseType = type;
+            xhr.open(method,url,async);
+            xhr.onload = function () {
+                resolve(xhr.response);
+            };
+            xhr.onerror = function (err) {
+                reject(err);
+            };
+            xhr.send(JSON.stringify(data));
+        })
+    }
+    ajax({
+        url:'/clock',
+        type:'json',
+        method:'GET',
+        async:true,
+        data:{
+            a:1,b:2
+        }
+    }).then(function (data) {
+        clock.innerHTML = data.date
+    },function () {
+        
+    })
+
+
 </script>
 </body>
 </html>

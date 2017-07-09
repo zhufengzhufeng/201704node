@@ -14,7 +14,6 @@ http.createServer(function (req,res) {
         let date = new Date().toLocaleString();
         res.end(JSON.stringify({date})); //string or buffer
     }
-
     else{
         let flag = fs.existsSync('.'+pathname);
         if(flag){
