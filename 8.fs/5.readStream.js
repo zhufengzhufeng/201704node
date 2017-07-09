@@ -6,7 +6,7 @@ let fs  = require('fs');
 let rs = fs.createReadStream('./name.txt',{highWaterMark:1});
 //默认这种模式 叫 非流动模式 -> 流动模式
 let arr = []; //Buffer.concat([buf1,buf2,buf3])
-rs.on('data',function (data) { //node会不停的 rs.emit('data',data)
+rs.on('data',function (data) { //node会不停的 rs.emit('data',data);
     console.log(data); //疯狂的触发
     arr.push(data);
     rs.pause(); //暂停的是data事件触发
