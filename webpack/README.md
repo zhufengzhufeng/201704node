@@ -9,3 +9,13 @@ npm install webpack --save-dev
 > package-lock.json不需要理会
 
 ## 创建一个webpack.config.js的文件
+
+## 让js 转化成es5代码，需要使用babel
+```
+npm install babel-core babel-loader --save-dev
+```
+
+## 需要将es6-> es5
+```
+npm install babel-preset-es2015 --save-dev
+```

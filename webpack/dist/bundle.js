@@ -65,13 +65,27 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-let fn = (a,b) =>{
-    return a+b;
+"use strict";
+
+
+var fn = function fn(a, b) {
+    return a + b;
 };
 
+var str = __webpack_require__(1);
+document.write(str);
 
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var str = '我很帅';
+module.exports = str;
 
 /***/ })
 /******/ ]);
