@@ -1,2 +1,3 @@
 let str = '我很帅';
-module.exports = str;
+//module.exports = str;
+export default str;

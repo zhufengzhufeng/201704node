@@ -18,4 +18,46 @@ npm install babel-core babel-loader --save-dev
 ## 需要将es6-> es5
 ```
 npm install babel-preset-es2015 --save-dev
+
 ```
+## 需要将es7-> es5
+```
+npm install babel-preset-stage-0 --save-dev
+```
+
+## 解析css 
+```
+npm install css-loader style-loader --save-dev
+```
+
+## 解析less
+```
+npm install less less-loader --save-dev
+```
+
+## webpack服务 在内存中打包，可以时刻拿到最新的改动
+```
+npm install webpack-dev-server --save-dev
+```
+## html-webpack-plugin 插件
+```
+npm install html-webpack-plugin --save-dev
+```
+## 解析图片
+```
+npm install file-loader url-loader --save-dev
+```
+
+## 安装vue-cli
+```
+npm install vue-cli -g
+```
+
+
+## 没实现自动重启 需要自动重启
+## 自动将src下的html打包到dist下
+## 图片的问题
+## vue-cli自动生成webpack，
+## vue的使用方式 (1.html+ css+ js ) (2.工程化)
+
+
