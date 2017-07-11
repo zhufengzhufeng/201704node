@@ -25,3 +25,17 @@
 
 
 http://idea.iteblog.com/key.php
+
+
+## vue-cli可以帮我们生成项目
+```
+npm install vue-cli -g
+vue init simple 项目名  x
+vue init webpack-simple 项目名
+```
+
+
+## vue
+- runtime + compiler 两个都支持
+- runtime-only 只能用render函数
+
