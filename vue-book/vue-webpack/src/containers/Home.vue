@@ -11,22 +11,25 @@
 
       </MHeader>
       <div class="content-scroll">
-          <Swiper></Swiper>
+          <Swiper :data="sliders"></Swiper>
       </div>
     </div>
 </template>
 <script>
     import MHeader from '../components/MHeader.vue';
     import Swiper from '../components/Swiper.vue';
+    //会默认查找api下index文件
     import {getSliders} from '../api'
     export default {
         //声明周期 beforeCreate created beforeMount mounted beforeUpdate updated beforeDestroy destroyed
         data(){
-            return {}
+            return {
+                sliders:[]
+            }
         },
         created(){
           getSliders().then(res=>{
-              console.log(res);
+              this.sliders = res.data;
           });
         },
         computed: {},
