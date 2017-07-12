@@ -10,7 +10,7 @@ http.createServer(function (req,res) {
         fs.createReadStream('./index.html').pipe(res);
     }
     else if(pathname === '/user'){
-        //如果query中有id 就是获取一个 没有就是获取全部
+        //如果query中有id 就是获取一个 没有就是获取全部  /user?id=1  GET
         let id = query.id;
         switch (req.method){ //req.method是大写的 GET
             case 'GET':
