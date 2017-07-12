@@ -21,12 +21,11 @@ http.createServer(function (req,res) {
       res.end(JSON.stringify(sliders));
     }else if(pathname === '/api/hot'){
       read(function (data) {
-        res.setHeader('Content-Type','application/json;charset=utf-8');
-        res.end(JSON.stringify(data.reverse().slice(0,9)));
+        setTimeout(function () { // 老板给钱就优化
+          res.setHeader('Content-Type','application/json;charset=utf-8');
+          res.end(JSON.stringify(data.reverse().slice(0,9)));
+        },2000)
       });
     }
 }).listen(5000);
 // localhost:8000 -> localhost:5000 会跨域
-
-
-
