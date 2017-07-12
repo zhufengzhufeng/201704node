@@ -1,9 +1,8 @@
+import Vue from 'vue';//引入vue
+import App from './App.vue';//根组件
+import router from './router';//不同的路径匹配出不同的内容
 
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-
-//引入公有样式
+//引入公有样式，很多页面都用的是公有样式
 import './assets/css/index.less'
 //引用轮播图插件
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -12,5 +11,7 @@ Vue.use(VueAwesomeSwiper); //VueAwesomeSwiper会提供两个组件
 new Vue({
   el: '#app',
   router,
-  ...App
+   ...App
+  /*template:'<App/>',
+  components:{App}*/
 });

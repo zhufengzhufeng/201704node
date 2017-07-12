@@ -1,6 +1,10 @@
 <template>
     <div class="header">
        {{title}}
+      <!--<slot name="b"></slot>
+      <slot name="pagination"></slot>
+      <slot name="default"></slot>
+      <slot></slot>-->
     </div>
 </template>
 <script>
