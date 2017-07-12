@@ -34,5 +34,6 @@ export default new Router({
       redirect:'/home'
     }
   ],
+  //更改默认的名字
   linkActiveClass:'active'
 })
