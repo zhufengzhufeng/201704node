@@ -3,87 +3,19 @@
       <!--动态的变量 m-top  MTop-->
       <MHeader title="首页"></MHeader>
       <div class="content-scroll">
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-        <p>内容区</p>
-
-
+          <Swiper></Swiper>
       </div>
     </div>
 </template>
 <script>
     import MHeader from '../components/MHeader.vue';
+    import Swiper from '../components/Swiper.vue'
     export default {
         data(){
             return {}
         },
         computed: {},
-        components: {MHeader},
+        components: {MHeader,Swiper},
         methods: {}
     }
 </script>
