@@ -10,3 +10,9 @@
 ## components基础组件 可复用
 - base
 
+## 组件的特点 可维护 可复用
+
+## 使用less 
+```
+npm install less less-loader --save-dev
+```
