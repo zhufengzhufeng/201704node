@@ -1,7 +1,12 @@
 <template>
     <div class="list page">
       <MHeader title="列表页"/>
-      <scroller class="scroll">
+      <scroller
+        class="scroll"
+        :on-refresh="getData"
+        :on-infinite="getListByPage"
+        ref="scroll"
+      >
       <ul>
         <li v-for="book in books">
           <img :src="book.bookCover" alt="">
@@ -22,14 +27,34 @@
         data(){
             return {books:[]}
         },
-        created(){
-          getBookList().then(res=>{
-            this.books = res.data;
-          });
-        },
+        /*created(){
+          this.getData();
+        },*/
         computed: {},
         components: {MHeader},
-        methods: {}
+        methods: {
+            getListByPage(){
+              //把以前的和新获取的加到一起显示到页面上
+              //这个方法 会默认调用一次
+              getBookList().then(res=>{
+                  this.books = [...this.books,...res.data];
+                  //获取数据后，要告诉下一次是否还有更多
+                  this.$refs.scroll.finishInfinite(false);
+                  //必须第一步满足 有一屏,如果没有 看是否有更多数据 有的话会继续加载，没有就停止了
+              })
+            },
+            getData(){
+              getBookList().then(res=>{
+                this.books = res.data;
+                console.log(this.$refs);
+                //过一秒后 停止刷新
+                setTimeout(()=>{
+                  this.$refs.scroll.finishPullToRefresh();
+                },500);
+
+              });
+            }
+        }
     }
 </script>
 <style scoped lang="less">

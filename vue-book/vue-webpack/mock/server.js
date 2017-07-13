@@ -32,8 +32,11 @@ http.createServer(function (req,res) {
         switch (req.method){
           case 'GET':
             read(function (data) {
-              res.setHeader('Content-Type','application/json;charset=utf-8');
+              setTimeout(()=>{
+                res.setHeader('Content-Type','application/json;charset=utf-8');
                 res.end(JSON.stringify(data));
+              },1000)
+
             });
         }
     }
