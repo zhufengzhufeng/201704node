@@ -14,12 +14,10 @@
             return {}
         },
         computed: {
-          ...mapState(['collect'])
+            ...mapState(['collect'])
         },
         components: {MHeader},
         methods: {}
     }
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>
