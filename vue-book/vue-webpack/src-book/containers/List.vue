@@ -9,7 +9,7 @@
       >
       <ul>
         <li v-for="book in books">
-          <img :src="book.bookCover" alt="">
+          <img v-lazy="book.bookCover" alt="">
           <div>
             <h3>{{book.bookName}}</h3>
             <p>{{book.bookInfo}}</p>
@@ -37,6 +37,8 @@
               //把以前的和新获取的加到一起显示到页面上
               //这个方法 会默认调用一次
               getBookList().then(res=>{
+                  //如果没有更多数据后台应该返回空数组
+                //默认页面不会再变长了，而且是true的情况下才表示没有更多数据了
                   this.books = [...this.books,...res.data];
                   //获取数据后，要告诉下一次是否还有更多
                   this.$refs.scroll.finishInfinite(false);

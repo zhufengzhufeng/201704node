@@ -12,6 +12,15 @@ Vue.use(VueAwesomeSwiper); //VueAwesomeSwiper会提供两个组件
 import VueScroller from 'vue-scroller';
 Vue.use(VueScroller); //会注册一个全局组件 scroller
 
+import VueLazyLoad from 'vue-lazyload';
+import loading from './assets/logo.png'; //本地需要导入图片使用
+
+
+Vue.use(VueLazyLoad, {
+  loading: loading,//加载是显示的loding图，提供了一个全局 指令 v-lazy 将真实的路径放到v-lazy上即可
+});
+
+
 new Vue({
   el: '#app',
   router,
