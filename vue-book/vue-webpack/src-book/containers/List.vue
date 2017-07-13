@@ -13,7 +13,7 @@
           <div>
             <h3>{{book.bookName}}</h3>
             <p>{{book.bookInfo}}</p>
-            <span><i class="iconfont icon-shoucang"></i>收藏</span>
+            <span @click="collect(book)"><i class="iconfont icon-shoucang"></i>收藏</span>
           </div>
         </li>
       </ul>
@@ -24,6 +24,8 @@
     // 组件使用的三部曲 引入 注册  标签形式使用
     import MHeader from '../components/MHeader.vue';
     import {getBookList} from '../api';
+    import {mapMutations} from 'vuex';
+    import * as types from '../vuex/mutation-types'
     export default {
         data(){
             return {books:[]}
@@ -34,6 +36,7 @@
         computed: {},
         components: {MHeader},
         methods: {
+          ...mapMutations([types.ADD_COLLECT]),
             getListByPage(){
               //把以前的和新获取的加到一起显示到页面上
               //这个方法 会默认调用一次
@@ -56,6 +59,11 @@
                 },500);
 
               });
+            },
+            collect(book){
+               this[types.ADD_COLLECT](book);
+               //$route 属性  $router 方法
+               this.$router.push('/collect');
             }
         }
     }

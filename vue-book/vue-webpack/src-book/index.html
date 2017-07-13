@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<div onclick=fn() id="div">
+点我
+</div>
+<script>
+  function fn() {
+    alert(1)
+  }
+  console.log(div.onclick);
+</script>
 <div style="height: 200px;width: 200px;background: blue;position: relative">
   <div style="position: absolute;top:20px;bottom: 20px;background: red;width: 100px;height: 100%;height: auto"></div>
 </div>
