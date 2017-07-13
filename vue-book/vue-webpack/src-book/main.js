@@ -20,11 +20,12 @@ Vue.use(VueLazyLoad, {
   loading: loading,//加载是显示的loding图，提供了一个全局 指令 v-lazy 将真实的路径放到v-lazy上即可
 });
 
-
+import store from './vuex'
 new Vue({
   el: '#app',
   router,
-   ...App
+   ...App,
+  store
   /*template:'<App/>',
   components:{App}*/
 });

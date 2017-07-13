@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <transition name="translate">
-      <router-view class="pos"></router-view>
+      <!--增加缓存 -->
+        <router-view class="pos"></router-view>
     </transition>
     <tab></tab>
   </div>

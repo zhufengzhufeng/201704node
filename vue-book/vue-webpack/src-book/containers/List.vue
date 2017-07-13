@@ -13,6 +13,7 @@
           <div>
             <h3>{{book.bookName}}</h3>
             <p>{{book.bookInfo}}</p>
+            <span><i class="iconfont icon-shoucang"></i>收藏</span>
           </div>
         </li>
       </ul>

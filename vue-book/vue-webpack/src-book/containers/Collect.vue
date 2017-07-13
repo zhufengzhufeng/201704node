@@ -1,15 +1,22 @@
 <template>
-    <div>
-      collect
+    <div class="page">
+      <MHeader title="收藏列表"></MHeader>
+      <div class="content-scroll">
+        {{collect}}
+      </div>
     </div>
 </template>
 <script>
+    import {mapState} from 'vuex';
+    import MHeader from '../components/MHeader.vue'
     export default {
         data(){
             return {}
         },
-        computed: {},
-        components: {},
+        computed: {
+          ...mapState(['collect'])
+        },
+        components: {MHeader},
         methods: {}
     }
 </script>
