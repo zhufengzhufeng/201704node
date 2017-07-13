@@ -13,6 +13,7 @@ function read(cb) {
     }
   });
 }
+
 http.createServer(function (req,res) {
   //获取轮播图数据
     let {pathname,query} = url.parse(req.url,true);
@@ -26,6 +27,15 @@ http.createServer(function (req,res) {
           res.end(JSON.stringify(data.reverse().slice(0,9)));
         },2000)
       });
+      //对书的增删改查  /api/book GET DELETE PUT POST
+    }else if(pathname === '/api/book'){
+        switch (req.method){
+          case 'GET':
+            read(function (data) {
+              res.setHeader('Content-Type','application/json;charset=utf-8');
+                res.end(JSON.stringify(data));
+            });
+        }
     }
 }).listen(5000);
 // localhost:8000 -> localhost:5000 会跨域

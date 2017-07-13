@@ -8,6 +8,10 @@ import './assets/css/index.less'
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper); //VueAwesomeSwiper会提供两个组件
 
+
+import VueScroller from 'vue-scroller';
+Vue.use(VueScroller); //会注册一个全局组件 scroller
+
 new Vue({
   el: '#app',
   router,
